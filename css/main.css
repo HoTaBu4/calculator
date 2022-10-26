@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+body {
+  font-family: "Roboto Slab";
+}
+
+.main_blank {
+  width: 400px;
+  height: 540px;
+  background-color: #CCCCCC;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blank_head {
+  margin: 29px 30px 0px 30px;
+  height: 120px;
+  width: 340px;
+  background-color: #E3E3E3;
+  border-radius: 20px 20px 0px 0px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.blank_head::-webkit-scrollbar {
+  width: 8px;
+}
+.blank_head::-webkit-scrollbar-track {
+  background: #b9b7b7;
+  border-radius: 2px;
+}
+.blank_head::-webkit-scrollbar-thumb {
+  background-color: #6100FF;
+  border-radius: 5px;
+}
+.blank_head::-webkit-scrollbar-thumb:hover {
+  background: #5100d4;
+}
+.blank_head span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100px;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+.blank_main {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #AEA6A6;
+  width: 340px;
+  height: 342px;
+  border-radius: 20px;
+  margin: 18px 0px 0px 0px;
+}
+
+.blank_buttons {
+  justify-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 24px 1fr 24px 1fr 24px 1fr;
+  -ms-grid-columns: 1fr 14px 1fr 14px 1fr 14px 1fr;
+      grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+  row-gap: 24px;
+  -webkit-column-gap: 14px;
+     -moz-column-gap: 14px;
+          column-gap: 14px;
+  padding: auto;
+}
+
+.buttons_decoration {
+  width: 59px;
+  height: 54px;
+  background-color: #6100FF;
+  border-radius: 5px;
+  text-align: center;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 63px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.buttons:hover {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #2F007C;
+  cursor: pointer;
+}
+
+.color {
+  background-color: #4E0ABE;
+}
