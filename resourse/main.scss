@@ -3,10 +3,7 @@ body{
     font-family: 'Roboto Slab';
 }
 
-.wrapper {
-}
-.head {
-}
+
 .main {
 		// .main_blank
 		&_blank {
@@ -62,9 +59,7 @@ body{
             margin: 18px 0px 0px 0px; 
             }
 }
-.text{
 
-}
 .blank {
 		// .blank_buttons
 		&_buttons {
@@ -73,7 +68,7 @@ body{
             grid-template: repeat(4,1fr)/repeat(4,1fr);
             row-gap: 24px;
             column-gap: 14px;
-            padding: auto;
+            padding-top: 25px;
 		}
 }
 
@@ -104,6 +99,4 @@ body{
 }
 .color{
       background-color:#4E0ABE;
-}
-.footer {
 }

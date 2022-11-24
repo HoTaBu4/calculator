@@ -75,7 +75,7 @@ body {
   -webkit-column-gap: 14px;
      -moz-column-gap: 14px;
           column-gap: 14px;
-  padding: auto;
+  padding-top: 25px;
 }
 
 .buttons_decoration {

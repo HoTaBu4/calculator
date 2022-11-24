@@ -1,37 +1,62 @@
 let txt  = document.querySelector('.text')
 
 document.addEventListener("click",function(event){
-    
     if(event.target.closest('.buttons')){
+      if(txt){
         txt.innerHTML += event.target.value
+      }
     }           
 })
 
 function equal(){
-let mass = txt.innerText.match(/(\d+)([/+-])(\d+)/gi);
-let resMass = mass[0].split('')
+
+    let first = txt.innerText.match(/(\d+)[.]*(\d*)/)[0]
+    let action = txt.innerText.match(/[/+-]/gi)
+    let second = txt.innerText.match(/(\d+)[.]*(\d*)$/)[0]
+
+    console.log(first);
+    console.log(action);
+    console.log(second);
   const actions =[{
           value: '*',
-          func: (a,b) => (parseInt(a) * parseInt(b))
+          func: (a,b) => (+(a) * +(b))
         },{
           value: '/',
           func: (a,b) => (a / b)
         },{
           value:'+',
-          func: (a,b) => (parseInt(a) + parseInt(b))
+          func: (a,b) => (+(a) + +(b))
         },{
           value: '-',
-          func: (a,b) => (parseInt(a) - parseInt(b))
+          func: (a,b) => (+(a) - +(b))
         }]
-    let first = resMass[0]
-    let action = resMass[1]
-    let second = resMass[2]
+    
       const result = actions.forEach((elem) =>{
+          
           if (elem.value == action){
-           return txt.innerText = elem.func(first,second)
+                let num = (elem.func(first,second)).toFixed(4)
+                let mathedNum = num.match(/[.]\d+/gi)
+                console.log(num);
+            
+                if(mathedNum[0].slice(1,2) == 0){
+                    txt.innerText = (elem.func(first,second)).toFixed(0)
+                }else{
+                    let numSplited = num.split('')
+                    let index = num.indexOf('.')
+                    for (let i = index;i < numSplited.length; i++) {
+                      console.log(i);
+                      if (numSplited[i] == 0) {
+                        
+                        txt.innerText = (numSplited.slice(0,i)).join('')
+                        return
+                      }
+                      
+                    }
+                }
           }          
       })
 }
+
 function delet(){
     txt.innerText = txt.innerText.slice(0,-1)
 }
